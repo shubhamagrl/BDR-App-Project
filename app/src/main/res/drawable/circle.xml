@@ -7,7 +7,7 @@
                 android:width="55dp"/>
             <gradient android:angle="0"
                 android:startColor="#086EB7"
-                android:endColor="#BE3962"
+                android:endColor="#BE3962"/>
         </shape>
     </item>
 </selector>
