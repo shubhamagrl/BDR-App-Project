@@ -140,8 +140,7 @@
             tools:context=".MainActivity">
 
             <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/idappbarlayout"
-                android:layout_width="match_parent"
+                android:id="@+id/idappbarlayout"                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/idviewPager"
                 android:layout_marginBottom="8dp">
