@@ -26,5 +26,12 @@ class MainActivity : AppCompatActivity() {
                 idmeter.setImageResource(arr[index])
             }
         }
+        displayProgress()
+    }
+    fun displayProgress(){
+        val progressValue = 40
+        binding.idprogressbar.progress = progressValue
+
+        binding.idprogress.text = progressValue.toString()
     }
 }
