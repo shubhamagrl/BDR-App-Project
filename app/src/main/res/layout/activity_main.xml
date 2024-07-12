@@ -156,8 +156,7 @@
                     app:tabIndicatorColor="@null"
                     app:tabIndicatorGravity="stretch"
                     app:tabMode="fixed"
-                    app:tabSelectedTextColor="@color/white"
-                    app:tabTextAppearance="@style/CustomTabStyle" />
+                    app:tabSelectedTextColor="@color/white" />
             </com.google.android.material.appbar.AppBarLayout>
 
             <androidx.viewpager.widget.ViewPager
