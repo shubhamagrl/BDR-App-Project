@@ -18,12 +18,10 @@ class fragment_home : Fragment() {
     lateinit var binding: FragmentHomeBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
+        savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false)
 
-        val profile_button: TextView = binding.idgreeting
+        val profile_button: TextView = binding.idprofile
         profile_button.setOnClickListener { view ->
             showPopupMenu(view)
         }
@@ -36,7 +34,7 @@ class fragment_home : Fragment() {
 
 
     fun showPopupMenu(view: View) {
-        val popupMenu = PopupMenu(context, view)
+        val popupMenu = PopupMenu(requireContext(), view)
         popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
 
         popupMenu.setOnMenuItemClickListener { menuItem ->
@@ -48,7 +46,7 @@ class fragment_home : Fragment() {
     private fun handleMenuItemClick(item: MenuItem, view: View): Boolean {
         return when (item.itemId) {
             R.id.option_1 -> {
-                view.findNavController().navigate(R.id.action_fragment_home3_to_fragment_profile)
+                Toast.makeText(requireContext(), "Profile", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.option_2 -> {
