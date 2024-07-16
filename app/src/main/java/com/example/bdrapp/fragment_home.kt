@@ -10,6 +10,7 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
 import com.example.bdrapp.databinding.FragmentHomeBinding
 
 class fragment_home : Fragment() {
@@ -39,23 +40,23 @@ class fragment_home : Fragment() {
         popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
 
         popupMenu.setOnMenuItemClickListener { menuItem ->
-            handleMenuItemClick(menuItem)
+            handleMenuItemClick(menuItem, view)
         }
 
         popupMenu.show()
     }
-    private fun handleMenuItemClick(item: MenuItem): Boolean {
+    private fun handleMenuItemClick(item: MenuItem, view: View): Boolean {
         return when (item.itemId) {
             R.id.option_1 -> {
-                Toast.makeText(requireContext(), "Profile", Toast.LENGTH_SHORT).show()
+                view.findNavController().navigate(R.id.action_fragment_home3_to_fragment_profile)
                 true
             }
             R.id.option_2 -> {
-                Toast.makeText(requireContext(), "Add Account", Toast.LENGTH_SHORT).show()
+                view.findNavController().navigate(R.id.action_fragment_home3_to_fragment_add_account)
                 true
             }
             R.id.option_3 -> {
-                Toast.makeText(requireContext(), "Logout", Toast.LENGTH_SHORT).show()
+                view.findNavController().navigate(R.id.action_fragment_home3_to_fragment_login)
                 true
             }
             else -> false

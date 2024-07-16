@@ -5,18 +5,34 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import com.example.bdrapp.databinding.FragmentLoginBinding
 
 class fragment_login : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+    lateinit var binding: FragmentLoginBinding
+    lateinit var login_button: Button
+    lateinit var create_button: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_login, container, false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false)
+
+        login_button = binding.idLoginButton
+        create_button = binding.idLoginCreate
+
+        login_button.setOnClickListener{
+            it.findNavController().navigate(R.id.action_fragment_login_to_fragment_home3)
+        }
+        create_button.setOnClickListener{
+            it.findNavController().navigate(R.id.action_fragment_login_to_fragment_add_account)
+        }
+
+        return binding.root
     }
 }
