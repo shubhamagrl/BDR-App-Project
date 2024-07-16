@@ -26,12 +26,6 @@ class fragment_login : Fragment() {
         login_button = binding.idLoginButton
         create_button = binding.idLoginCreate
 
-        login_button.setOnClickListener{
-            it.findNavController().navigate(R.id.action_fragment_login_to_fragment_home3)
-        }
-        create_button.setOnClickListener{
-            it.findNavController().navigate(R.id.action_fragment_login_to_fragment_add_account)
-        }
 
         return binding.root
     }

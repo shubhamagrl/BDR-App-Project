@@ -50,11 +50,9 @@ class fragment_home : Fragment() {
                 true
             }
             R.id.option_2 -> {
-                view.findNavController().navigate(R.id.action_fragment_home3_to_fragment_add_account)
                 true
             }
             R.id.option_3 -> {
-                view.findNavController().navigate(R.id.action_fragment_home3_to_fragment_login)
                 true
             }
             else -> false
