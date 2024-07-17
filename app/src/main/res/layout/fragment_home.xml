@@ -29,8 +29,7 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="16dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/points" />
+                    app:layout_constraintTop_toTopOf="parent"/>
 
                 <TextView
                     android:id="@+id/idpoints"
@@ -58,14 +57,14 @@
 
                 <ProgressBar
                     android:id="@+id/idprogressbar"
-                    style="@style/Widget.AppCompat.ProgressBar"
+                    style="@style/CircularDeterminateProgressBar"
                     android:layout_width="113dp"
                     android:layout_height="111dp"
                     android:layout_marginEnd="24dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.512" />
+                    app:layout_constraintVertical_bias="0.512"/>
 
                 <TextView
                     android:id="@+id/idprogress"

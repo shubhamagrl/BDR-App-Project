@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.BDRApp" parent="Base.Theme.BDRApp" />
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circular_progress_bar</item>
+    </style>
 </resources>
