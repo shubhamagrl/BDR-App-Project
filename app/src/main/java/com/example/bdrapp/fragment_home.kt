@@ -11,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.bdrapp.databinding.FragmentHomeBinding
 
 class fragment_home : Fragment() {
@@ -46,10 +47,10 @@ class fragment_home : Fragment() {
     private fun handleMenuItemClick(item: MenuItem, view: View): Boolean {
         return when (item.itemId) {
             R.id.option_1 -> {
-                Toast.makeText(requireContext(), "Profile", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.option_2 -> {
+                Toast.makeText(requireContext(), "Add Account", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.option_3 -> {

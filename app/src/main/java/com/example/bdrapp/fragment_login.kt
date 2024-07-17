@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.bdrapp.databinding.FragmentLoginBinding
 
 class fragment_login : Fragment() {
@@ -25,6 +26,10 @@ class fragment_login : Fragment() {
 
         login_button = binding.idLoginButton
         create_button = binding.idLoginCreate
+
+        /*login_button.setOnClickListener{
+            it.findNavController().navigate(R.id.action_fragment_login_to_mainActivity)
+        }*/
 
 
         return binding.root
