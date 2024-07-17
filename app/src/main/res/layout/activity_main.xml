@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
@@ -7,167 +8,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cardView"
-            android:layout_width="379dp"
-            android:layout_height="152dp"
-            app:cardCornerRadius="20dp"
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/idviewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.18">
+            app:layout_constraintTop_toTopOf="parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        </androidx.viewpager.widget.ViewPager>
 
-                <ImageView
-                    android:id="@+id/idpointsimage"
-                    android:layout_width="52dp"
-                    android:layout_height="47dp"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="16dp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/points" />
 
-                <TextView
-                    android:id="@+id/idpoints"
-                    android:layout_width="102dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:gravity="center"
-                    android:text="100 Points"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/idpointsimage"
-                    app:layout_constraintStart_toEndOf="@+id/idpointsimage"
-                    app:layout_constraintTop_toTopOf="@+id/idpointsimage"
-                    app:layout_constraintVertical_bias="0.6" />
-
-                <TextView
-                    android:id="@+id/idrank"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginBottom="28dp"
-                    android:text="Rank #207"
-                    android:textSize="25sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ProgressBar
-                    android:id="@+id/idprogressbar"
-                    style="@style/Widget.AppCompat.ProgressBar"
-                    android:layout_width="113dp"
-                    android:layout_height="111dp"
-                    android:layout_marginEnd="24dp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.512" />
-
-                <TextView
-                    android:id="@+id/idprogress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="7"
-                    android:textSize="40sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/idprogressbar"
-                    app:layout_constraintEnd_toEndOf="@+id/idprogressbar"
-                    app:layout_constraintHorizontal_bias="0.509"
-                    app:layout_constraintStart_toStartOf="@+id/idprogressbar"
-                    app:layout_constraintTop_toTopOf="@+id/idprogressbar" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/constraintLayout"
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/idtablayout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/cardView"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.6">
-
-            <ImageView
-                android:id="@+id/idmeter"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="24dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/connected" />
-
-            <TextView
-                android:id="@+id/idprofile"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginEnd="24dp"
-                android:background="@drawable/circle"
-                android:gravity="center"
-                android:text="S"
-                android:textColor="@color/white"
-                android:textSize="24sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/idgreeting"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hello Shubham!"
-                android:textSize="28sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <RelativeLayout
-
-            android:id="@+id/relativeLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:context=".MainActivity">
-
-            <com.google.android.material.appbar.AppBarLayout
-                android:id="@+id/idappbarlayout"                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@id/idviewPager"
-                android:layout_marginBottom="8dp">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/idtablayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    app:tabGravity="fill"
-                    app:tabIndicator="@drawable/tab_indicator"
-                    app:tabIndicatorAnimationMode="elastic"
-                    app:tabIndicatorColor="@null"
-                    app:tabIndicatorGravity="stretch"
-                    app:tabMode="fixed"
-                    app:tabSelectedTextColor="@color/white" />
-            </com.google.android.material.appbar.AppBarLayout>
-
-            <androidx.viewpager.widget.ViewPager
-                android:id="@+id/idviewPager"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_marginTop="0dp">
-
-            </androidx.viewpager.widget.ViewPager>
-
-        </RelativeLayout>
+            app:tabGravity="fill"
+            app:tabIndicator="@drawable/tab_indicator"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@null"
+            app:tabIndicatorGravity="stretch"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/white" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 </layout>
