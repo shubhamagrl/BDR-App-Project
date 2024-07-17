@@ -20,6 +20,9 @@ import com.example.bdrapp.adapters.myPagerAdapter
 import com.example.bdrapp.databinding.ActivityMainBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
+import androidx.navigation.NavController
+import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.fragment.NavHostFragment
 
 class MainActivity : AppCompatActivity() {
 
@@ -38,7 +41,7 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    fun setup(){
+    fun setup() {
         viewPager2 = findViewById(R.id.id_viewPager2)
         adapter = myPagerAdapter(this)
         viewPager2.adapter = adapter
@@ -59,22 +62,42 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun tabSelection(){
+    fun tabSelection() {
         tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab) {
                 val tabIcon = tab.customView?.findViewById<ImageView>(R.id.id_tab_icon)
                 val tabTitle = tab.customView?.findViewById<TextView>(R.id.id_tab_text)
 
-                tabIcon?.setColorFilter(ContextCompat.getColor(this@MainActivity, R.color.selectedColor), PorterDuff.Mode.SRC_IN)
-                tabTitle?.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.selectedColor))
+                tabIcon?.setColorFilter(
+                    ContextCompat.getColor(
+                        this@MainActivity,
+                        R.color.selectedColor
+                    ), PorterDuff.Mode.SRC_IN
+                )
+                tabTitle?.setTextColor(
+                    ContextCompat.getColor(
+                        this@MainActivity,
+                        R.color.selectedColor
+                    )
+                )
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab) {
                 val tabIcon = tab.customView?.findViewById<ImageView>(R.id.id_tab_icon)
                 val tabTitle = tab.customView?.findViewById<TextView>(R.id.id_tab_text)
 
-                tabIcon?.setColorFilter(ContextCompat.getColor(this@MainActivity, R.color.unselectedColor), PorterDuff.Mode.SRC_IN)
-                tabTitle?.setTextColor(ContextCompat.getColor(this@MainActivity, R.color.unselectedColor))
+                tabIcon?.setColorFilter(
+                    ContextCompat.getColor(
+                        this@MainActivity,
+                        R.color.unselectedColor
+                    ), PorterDuff.Mode.SRC_IN
+                )
+                tabTitle?.setTextColor(
+                    ContextCompat.getColor(
+                        this@MainActivity,
+                        R.color.unselectedColor
+                    )
+                )
             }
 
             override fun onTabReselected(tab: TabLayout.Tab?) {
@@ -82,6 +105,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
     fun getTabView(position: Int): View {
         val view = LayoutInflater.from(this).inflate(R.layout.custom_tab_layout, null)
         val tabIcon: ImageView = view.findViewById(R.id.id_tab_icon)

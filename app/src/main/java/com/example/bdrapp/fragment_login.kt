@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -14,8 +15,6 @@ import com.example.bdrapp.databinding.FragmentLoginBinding
 class fragment_login : Fragment() {
 
     lateinit var binding: FragmentLoginBinding
-    lateinit var login_button: Button
-    lateinit var create_button: Button
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,13 +23,9 @@ class fragment_login : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false)
 
-        login_button = binding.idLoginButton
-        create_button = binding.idLoginCreate
-
-        /*login_button.setOnClickListener{
-            it.findNavController().navigate(R.id.action_fragment_login_to_mainActivity)
-        }*/
-
+        binding.idLoginButton.setOnClickListener {
+            Toast.makeText(requireContext(), "Clicked!", Toast.LENGTH_SHORT).show()
+        }
 
         return binding.root
     }

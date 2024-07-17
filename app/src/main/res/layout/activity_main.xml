@@ -8,6 +8,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <!--<androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:defaultNavHost="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navGraph="@navigation/nav_graph" />-->
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/idtablayout"
             android:layout_width="0dp"
@@ -20,7 +32,7 @@
             app:tabIndicatorAnimationMode="elastic"
             app:tabIndicatorColor="@null"
             app:tabIndicatorGravity="stretch"
-            app:tabMode="fixed"/>
+            app:tabMode="fixed" />
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/id_viewPager2"
