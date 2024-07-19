@@ -6,17 +6,23 @@ import android.view.LayoutInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.FrameLayout
 import android.widget.PopupMenu
 import android.widget.TextView
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.bdrapp.databinding.FragmentHomeBinding
 
 class fragment_home : Fragment() {
-    
+
+    private var isOriginal: Boolean = true
     lateinit var binding: FragmentHomeBinding
+    lateinit var cardContent: FrameLayout
+    lateinit var card: CardView
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
@@ -29,11 +35,30 @@ class fragment_home : Fragment() {
 
         meter()
         displayProgress()
+        first_card()
 
         return binding.root
     }
 
+    fun first_card(){
+        cardContent = binding.cardContent
+        card = binding.cardView
 
+        val originalContent = layoutInflater.inflate(R.layout.first_card_1, cardContent,false)
+        val modifiedContent = layoutInflater.inflate(R.layout.first_card_2, cardContent, false)
+        cardContent.addView(originalContent)
+
+        card.setOnClickListener{
+            cardContent.removeAllViews()
+            if(isOriginal){
+                cardContent.addView(originalContent)
+            }
+            else{
+                cardContent.addView(modifiedContent)
+            }
+            isOriginal = !isOriginal
+        }
+    }
     fun showPopupMenu(view: View) {
         val popupMenu = PopupMenu(requireContext(), view)
         popupMenu.menuInflater.inflate(R.menu.profile_menu, popupMenu.menu)
@@ -63,7 +88,7 @@ class fragment_home : Fragment() {
 
     fun displayProgress(){
         val progressValue = 60
-        binding.idprogressbar.progress = progressValue
+        //binding.idprogressbar.progress = progressValue
     }
     fun meter(){
         var arr = listOf(R.drawable.connected, R.drawable.disconnected)

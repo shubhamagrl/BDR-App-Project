@@ -4,4 +4,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Event_title">Participate to save on electricity</string>
     <string name="Event_desc">Switch off unnecessary appliances between 6 to 8 PM</string>
+    <string name="profile_units">KWh Saved: 500</string>
+    <string name="profile_co2">CO2 Emissions reduced: 250 Kg</string>
+    <string name="profile_events">Events Participated: 8</string>
+    <string name="profile_days">Days Active: 204</string>
 </resources>
