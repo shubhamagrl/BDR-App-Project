@@ -10,4 +10,5 @@
     <string name="profile_days">Days Active: 204</string>
     <string name="participate_today">Participated in 0 events today</string>
     <string name="participate_yesterday">Participated in 1 event yesterday</string>
+    <string name="forgot_pass">Forgot Password?</string>
 </resources>
