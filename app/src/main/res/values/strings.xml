@@ -8,4 +8,6 @@
     <string name="profile_co2">CO2 Emissions reduced: 250 Kg</string>
     <string name="profile_events">Events Participated: 8</string>
     <string name="profile_days">Days Active: 204</string>
+    <string name="participate_today">Participated in 0 events today</string>
+    <string name="participate_yesterday">Participated in 1 event yesterday</string>
 </resources>
