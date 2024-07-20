@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        binding = DataBindingUtil.setContentView(this,R.layout.activity_main)
 
         setup()
         tabSelection()
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
 
     fun setup() {
-        viewPager2 = findViewById(R.id.id_viewPager2)
+        viewPager2 = binding.idViewPager2
         adapter = myPagerAdapter(this)
         viewPager2.adapter = adapter
 

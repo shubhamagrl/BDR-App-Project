@@ -1,5 +1,6 @@
 package com.example.bdrapp
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -24,7 +25,8 @@ class fragment_login : Fragment() {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_login,container,false)
 
         binding.idLoginButton.setOnClickListener {
-            Toast.makeText(requireContext(), "Clicked!", Toast.LENGTH_SHORT).show()
+            val intent = Intent(requireContext(),MainActivity::class.java)
+            startActivity(intent)
         }
 
         return binding.root
