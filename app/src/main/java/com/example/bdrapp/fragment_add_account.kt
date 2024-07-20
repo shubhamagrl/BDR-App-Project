@@ -22,8 +22,6 @@ class fragment_add_account : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_add_account,container,false)
 
-        create = binding.idCreateButton
-
         return binding.root
     }
 }

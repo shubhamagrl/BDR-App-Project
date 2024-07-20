@@ -36,11 +36,7 @@ class fragment_home : Fragment() {
         savedInstanceState: Bundle?): View? {
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_home,container,false)
 
-        val profile_button: TextView = binding.idprofile
-        profile_button.setOnClickListener { view ->
-            showPopupMenu(view)
-        }
-
+        profile_menu()
         meter()
         displayProgress()
         first_card()
@@ -111,6 +107,13 @@ class fragment_home : Fragment() {
                 cardContent.addView(modifiedContent)
             }
             isOriginal = !isOriginal
+        }
+    }
+
+    fun profile_menu(){
+        val profile_button: TextView = binding.idprofile
+        profile_button.setOnClickListener { view ->
+            showPopupMenu(view)
         }
     }
     fun showPopupMenu(view: View) {

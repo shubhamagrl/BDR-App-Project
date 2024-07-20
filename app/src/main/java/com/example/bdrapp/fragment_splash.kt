@@ -20,8 +20,7 @@ class fragment_splash : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_splash,container,false)
 
-        var login_btn = binding.button4
-        login_btn.setOnClickListener{
+        binding.button4.setOnClickListener{
             it.findNavController().navigate(R.id.action_fragment_splash_to_fragment_login)
         }
 
