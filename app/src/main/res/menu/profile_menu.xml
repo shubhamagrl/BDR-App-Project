@@ -7,10 +7,6 @@
     <item
         android:id="@+id/option_2"
         android:icon="@mipmap/ic_launcher_round"
-        android:title="Add Account" />
-    <item
-        android:id="@+id/option_3"
-        android:icon="@mipmap/ic_launcher_round"
         android:title="Logout" />
 
 </menu>

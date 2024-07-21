@@ -22,6 +22,10 @@ class fragment_add_account : Fragment() {
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(inflater,R.layout.fragment_add_account,container,false)
 
+        binding.idCreateButton.setOnClickListener{
+            it.findNavController().navigate(R.id.action_fragment_add_account_to_fragment_login)
+        }
+
         return binding.root
     }
 }

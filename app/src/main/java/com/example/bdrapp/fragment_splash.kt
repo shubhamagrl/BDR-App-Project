@@ -23,6 +23,9 @@ class fragment_splash : Fragment() {
         binding.button4.setOnClickListener{
             it.findNavController().navigate(R.id.action_fragment_splash_to_fragment_login)
         }
+        binding.button5.setOnClickListener{
+            it.findNavController().navigate(R.id.action_fragment_splash_to_fragment_add_account)
+        }
 
         return binding.root
     }

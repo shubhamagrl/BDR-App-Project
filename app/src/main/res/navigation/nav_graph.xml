@@ -12,10 +12,22 @@
         <action
             android:id="@+id/action_fragment_splash_to_fragment_login"
             app:destination="@id/fragment_login" />
+        <action
+            android:id="@+id/action_fragment_splash_to_fragment_add_account"
+            app:destination="@id/fragment_add_account" />
     </fragment>
     <fragment
         android:id="@+id/fragment_login"
         android:name="com.example.bdrapp.fragment_login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login"/>
+    <fragment
+        android:id="@+id/fragment_add_account"
+        android:name="com.example.bdrapp.fragment_add_account"
+        android:label="fragment_add_account"
+        tools:layout="@layout/fragment_add_account">
+        <action
+            android:id="@+id/action_fragment_add_account_to_fragment_login"
+            app:destination="@id/fragment_login" />
+    </fragment>
 </navigation>
