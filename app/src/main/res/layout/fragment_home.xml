@@ -16,12 +16,11 @@
                 android:id="@+id/cardView"
                 android:layout_width="380dp"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="140dp"
                 app:cardCornerRadius="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.18">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <FrameLayout
                     android:id="@+id/cardContent"
@@ -281,7 +280,7 @@
                         android:layout_marginTop="8dp"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+                        android:background="@drawable/coins_icon"/>
 
                     <Button
                         android:id="@+id/button"

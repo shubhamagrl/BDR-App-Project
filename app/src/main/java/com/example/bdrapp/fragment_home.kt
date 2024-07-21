@@ -129,10 +129,14 @@ class fragment_home : Fragment() {
     fun handleMenuItemClick(item: MenuItem, view: View): Boolean {
         return when (item.itemId) {
             R.id.option_1 -> {
-                Toast.makeText(requireContext(), "Profile", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "My Profile", Toast.LENGTH_SHORT).show()
                 true
             }
             R.id.option_2 -> {
+                Toast.makeText(requireContext(), "Settings", Toast.LENGTH_SHORT).show()
+                true
+            }
+            R.id.option_3 -> {
                 Toast.makeText(requireContext(), "Logout", Toast.LENGTH_SHORT).show()
                 true
             }
