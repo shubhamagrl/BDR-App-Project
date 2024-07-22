@@ -150,14 +150,6 @@ class fragment_home : Fragment() {
         //binding.idprogressbar.progress = progressValue
     }
     fun meter(){
-        var arr = listOf(R.drawable.connected, R.drawable.disconnected)
-        var index = 0
-
-        binding.apply {
-            idmeter.setOnClickListener {
-                index = (index + 1) % 2
-                idmeter.setImageResource(arr[index])
-            }
-        }
+        binding.idmeter.setImageResource(R.drawable.connected)
     }
 }
